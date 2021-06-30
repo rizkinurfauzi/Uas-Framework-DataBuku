@@ -1,5 +1,5 @@
 ### [Aplikasi Perekaman Toko Buku](http://bookstore-adesug.herokuapp.com/) klik
-### [Diagram dan penjelasan](https://drive.google.com/file/d/1DsYMeY8FXMdUVxyXjaFOSRkWBNsQ4oB5/view?usp=sharing) klik
+### [Diagram dan penjelasan](https://drive.google.com/file/d/1Qd8CMLd8IXZ9_U8EhuvYh--SgUJfdO4G/view?usp=sharing) klik
 #### By
 - Nama  : Rizki Nur Fauzi
 - NIM   : 18090054
