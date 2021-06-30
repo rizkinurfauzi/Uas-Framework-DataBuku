@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 29, 2021 at 11:16 AM
--- Server version: 10.4.14-MariaDB
--- PHP Version: 7.4.10
+-- Waktu pembuatan: 30 Jun 2021 pada 07.49
+-- Versi server: 10.4.16-MariaDB
+-- Versi PHP: 7.4.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,14 +24,14 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `bukus`
+-- Struktur dari tabel `bukus`
 --
 
 CREATE TABLE `bukus` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `no_surat` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `tanggal_surat` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `judul_surat` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `judulBuku` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `penulis` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `penerbit` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `gambar` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `public_id` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
@@ -39,16 +39,16 @@ CREATE TABLE `bukus` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `bukus`
+-- Dumping data untuk tabel `bukus`
 --
 
-INSERT INTO `bukus` (`id`, `no_surat`, `tanggal_surat`, `judul_surat`, `gambar`, `public_id`, `created_at`, `updated_at`) VALUES
-(2, '123', '2021-06-10', 'sadasdd', 'https://res.cloudinary.com/mindaka/image/upload/v1624955847/frameworkpro/2021-06-29%2008:37:18-.png', 'frameworkpro/2021-06-29 08:37:18-', '2021-06-29 01:37:28', '2021-06-29 01:37:28');
+INSERT INTO `bukus` (`id`, `judulBuku`, `penulis`, `penerbit`, `gambar`, `public_id`, `created_at`, `updated_at`) VALUES
+(3, 'Rizki Nur', 'Salman Aristo; ‎Riri Riza‎; ‎Mira Les', 'Miles Films', 'https://res.cloudinary.com/mindaka/image/upload/v1625031345/frameworkpro/2021-06-30%2005:35:40-Laskar%20Pelangi.png', 'frameworkpro/2021-06-30 05:35:40-Laskar Pelangi', '2021-06-29 22:35:45', '2021-06-29 22:36:05');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `failed_jobs`
+-- Struktur dari tabel `failed_jobs`
 --
 
 CREATE TABLE `failed_jobs` (
@@ -63,7 +63,7 @@ CREATE TABLE `failed_jobs` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `migrations`
+-- Struktur dari tabel `migrations`
 --
 
 CREATE TABLE `migrations` (
@@ -73,7 +73,7 @@ CREATE TABLE `migrations` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `migrations`
+-- Dumping data untuk tabel `migrations`
 --
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
@@ -85,7 +85,7 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `password_resets`
+-- Struktur dari tabel `password_resets`
 --
 
 CREATE TABLE `password_resets` (
@@ -97,7 +97,7 @@ CREATE TABLE `password_resets` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Struktur dari tabel `users`
 --
 
 CREATE TABLE `users` (
@@ -112,75 +112,77 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `users`
+-- Dumping data untuk tabel `users`
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'wisnu', 'wisnuwisnu466@gmail.com', NULL, '$2y$10$IYO0dsjBHDG.16huj0l/MeQ2THEBav0MTPjMJo17soNgS1yrr9kYi', NULL, '2021-06-29 01:09:30', '2021-06-29 01:09:30'),
-(2, 'Wisnu Kusumo', 'wisnuwisnu123@gmail.com', NULL, '$2y$10$FV1936vaWxRWWm8dhAC6zupAiMIPxaUaupc3Jwh12yCdSLunLLJim', NULL, '2021-06-29 01:25:48', '2021-06-29 01:25:48');
+(1, 'jablud', 'iqbal@gmail.com', NULL, '$2y$10$7UOjerC3ZP9y2duofaI4M.EK3vLVZdeRET6IERj3m2pcSo/dfHRF2', NULL, '2021-06-28 20:13:51', '2021-06-28 20:13:51'),
+(2, 'rizqi', 'info@kisimedia.com', NULL, '$2y$10$q/mS1itqt7i6Dd48Q22NS.w5LixL7Q3cM4IWOJ2Yk1mNY18AJLrnu', NULL, '2021-06-29 06:13:08', '2021-06-29 06:13:08'),
+(3, 'rizki', 'rizkinurfauzi0@gmail.com', NULL, '$2y$10$Z4Q0QI4HvDF7dOzv0cG43OM.7qcRktj2gOsV.V7GIERm5Y0BOi4tW', NULL, '2021-06-29 16:50:53', '2021-06-29 16:50:53'),
+(4, 'Rizki', 'rizki123@gmail.com', NULL, '$2y$10$tW39BLGeGqrV6o0OxjbYNelrwvou2YwDDaN81kM3qwlaYfH9ulK6C', NULL, '2021-06-29 22:25:03', '2021-06-29 22:25:03');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `bukus`
+-- Indeks untuk tabel `bukus`
 --
 ALTER TABLE `bukus`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `failed_jobs`
+-- Indeks untuk tabel `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `migrations`
+-- Indeks untuk tabel `migrations`
 --
 ALTER TABLE `migrations`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `password_resets`
+-- Indeks untuk tabel `password_resets`
 --
 ALTER TABLE `password_resets`
   ADD KEY `password_resets_email_index` (`email`);
 
 --
--- Indexes for table `users`
+-- Indeks untuk tabel `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `users_email_unique` (`email`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `bukus`
+-- AUTO_INCREMENT untuk tabel `bukus`
 --
 ALTER TABLE `bukus`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `failed_jobs`
+-- AUTO_INCREMENT untuk tabel `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `migrations`
+-- AUTO_INCREMENT untuk tabel `migrations`
 --
 ALTER TABLE `migrations`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT for table `users`
+-- AUTO_INCREMENT untuk tabel `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
